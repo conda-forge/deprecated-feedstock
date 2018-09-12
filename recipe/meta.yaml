@@ -1,8 +1,8 @@
 {% set name = "Deprecated" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.3" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "42b5dffc4023401148e9d2757f46a4a9fcccf114547a4620347ae45f9e77a21c" %}
+{% set hash_value = "0b1e043af3bab6c7ebcf96a471d0e75685ffe1390924e28137a8f1bd33781195" %}
 
 package:
   name: '{{ name|lower }}'
