@@ -1,8 +1,8 @@
 {% set name = "Deprecated" %}
-{% set version = "1.2.6" %}
+{% set version = "1.2.7" %}
 {% set file_ext = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "a515c4cf75061552e0284d123c3066fbbe398952c87333a92b8fc3dd8e4f9cc1" %}
+{% set hash_value = "408038ab5fdeca67554e8f6742d1521cd3cd0ee0ff9d47f29318a4f4da31c308" %}
 
 package:
   name: '{{ name|lower }}'
@@ -34,6 +34,7 @@ test:
 about:
   home: https://github.com/tantale/deprecated
   license: MIT
+  license_file: LICENSE.rst
   license_family: MIT
   # https://github.com/tantale/deprecated/pull/1
   # license_file: ''
