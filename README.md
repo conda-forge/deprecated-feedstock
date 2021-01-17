@@ -5,11 +5,11 @@ Home: https://github.com/tantale/deprecated
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/deprecated-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python @deprecated decorator to deprecate old python classes, functions or methods.
 
-
+Development: https://github.com/tantale/deprecated
 
 Current build status
 ====================
