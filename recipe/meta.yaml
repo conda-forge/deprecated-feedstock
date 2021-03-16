@@ -19,10 +19,10 @@ requirements:
   host:
     - python
     - pip
-    - wrapt <2,>=1
+    - wrapt <2,>=1.10
   run:
-    - python
-    - wrapt <2,>=1
+    - python >=2.7
+    - wrapt <2,>=1.10
 
 test:
   imports:
@@ -33,11 +33,10 @@ about:
   license: MIT
   license_file: LICENSE.rst
   license_family: MIT
-  # https://github.com/tantale/deprecated/pull/1
-  # license_file: ''
   summary: Python @deprecated decorator to deprecate old python classes, functions or methods.
   dev_url: https://github.com/tantale/deprecated
 
 extra:
   recipe-maintainers:
     - mariusvniekerk
+    - dbast
