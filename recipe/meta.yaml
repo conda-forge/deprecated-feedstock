@@ -1,5 +1,5 @@
 {% set name = "Deprecated" %}
-{% set version = "1.2.10" %}
+{% set version = "1.2.12" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 525ba66fb5f90b07169fdd48b6373c18f1ee12728ca277ca44567a367d9d7f74
+  sha256: 6d2de2de7931a968874481ef30208fd4e08da39177d61d3d4ebdf4366e7dbca1
 
 build:
   number: 0
@@ -19,10 +19,10 @@ requirements:
   host:
     - python
     - pip
-    - wrapt <2,>=1
+    - wrapt <2,>=1.10
   run:
-    - python
-    - wrapt <2,>=1
+    - python >=2.7
+    - wrapt <2,>=1.10
 
 test:
   imports:
@@ -33,11 +33,10 @@ about:
   license: MIT
   license_file: LICENSE.rst
   license_family: MIT
-  # https://github.com/tantale/deprecated/pull/1
-  # license_file: ''
   summary: Python @deprecated decorator to deprecate old python classes, functions or methods.
   dev_url: https://github.com/tantale/deprecated
 
 extra:
   recipe-maintainers:
     - mariusvniekerk
+    - dbast
