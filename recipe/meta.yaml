@@ -1,5 +1,5 @@
 {% set name = "Deprecated" %}
-{% set version = "1.2.12" %}
+{% set version = "1.2.13" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6d2de2de7931a968874481ef30208fd4e08da39177d61d3d4ebdf4366e7dbca1
+  sha256: 43ac5335da90c31c24ba028af536a91d41d53f9e6901ddb021bcc572ce44e38d
 
 build:
   number: 0
