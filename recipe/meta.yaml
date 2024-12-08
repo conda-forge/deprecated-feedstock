@@ -7,24 +7,26 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
   sha256: 683e561a90de76239796e6b6feac66b99030d2dd3fcf61ef996330f14bbb9b0d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install --ignore-installed --no-deps .
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - wrapt <2,>=1.10
   run:
-    - python >=2.7
+    - python >={{ python_min }}
     - wrapt <2,>=1.10
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - deprecated
 
