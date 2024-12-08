@@ -19,7 +19,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - wrapt <2,>=1.10
+    - setuptools
   run:
     - python >={{ python_min }}
     - wrapt <2,>=1.10
