@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  name: deprecated
+  version: "3.0.0"
+  python_min: "3.12"
+
+package:
+  name: ${{ name }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/D/Deprecated/${{ name }}-${{ version }}.tar.gz
+  sha256: 16850204d3a1e6bb0acd06bff48d96e8b0a0d25d1c52f71705405a0f4894192d
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - hatchling >=1.27
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - python >=${{ python_min }}
+    - wrapt >=1.16,<3
+
+tests:
+  - python:
+      imports:
+        - deprecated
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - python
+
+about:
+  homepage: https://github.com/laurent-laporte-pro/deprecated
+  repository: https://github.com/laurent-laporte-pro/deprecated
+  documentation: https://deprecated.readthedocs.io/en/latest/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.md
+  summary: Python @deprecated decorator to deprecate old python classes, functions or methods.
+
+extra:
+  recipe-maintainers:
+    - mariusvniekerk
+    - dbast
