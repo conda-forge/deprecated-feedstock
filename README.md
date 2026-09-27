@@ -3,22 +3,25 @@ About deprecated-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/deprecated-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/tantale/deprecated
+Home: https://github.com/laurent-laporte-pro/deprecated
 
 Package license: MIT
 
 Summary: Python @deprecated decorator to deprecate old python classes, functions or methods.
 
-Development: https://github.com/tantale/deprecated
+Development: https://github.com/laurent-laporte-pro/deprecated
+
+Documentation: https://deprecated.readthedocs.io/en/latest/
 
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2844&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/deprecated-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/deprecated-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/deprecated-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -41,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `deprecated` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install deprecated
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install deprecated
 ```
 
-It is possible to list all of the versions of `deprecated` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add deprecated
+# for installing globally
+pixi global install deprecated
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `deprecated` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search deprecated --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search deprecated --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search deprecated --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -77,6 +122,8 @@ mamba repoquery whoneeds deprecated --channel conda-forge
 # List dependencies of `deprecated`:
 mamba repoquery depends deprecated --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
