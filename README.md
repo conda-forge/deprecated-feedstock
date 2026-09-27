@@ -3,13 +3,15 @@ About deprecated-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/deprecated-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/tantale/deprecated
+Home: https://github.com/laurent-laporte-pro/deprecated
 
 Package license: MIT
 
 Summary: Python @deprecated decorator to deprecate old python classes, functions or methods.
 
-Development: https://github.com/tantale/deprecated
+Development: https://github.com/laurent-laporte-pro/deprecated
+
+Documentation: https://deprecated.readthedocs.io/en/latest/
 
 Current build status
 ====================
